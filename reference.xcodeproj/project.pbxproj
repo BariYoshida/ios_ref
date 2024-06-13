@@ -16,6 +16,9 @@
 		3B631E842C1AF96500F03A1B /* referenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B631E832C1AF96500F03A1B /* referenceTests.swift */; };
 		3B631E8E2C1AF96500F03A1B /* referenceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B631E8D2C1AF96500F03A1B /* referenceUITests.swift */; };
 		3B631E902C1AF96500F03A1B /* referenceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B631E8F2C1AF96500F03A1B /* referenceUITestsLaunchTests.swift */; };
+		3B631E9E2C1AFBB600F03A1B /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 3B631E9D2C1AFBB600F03A1B /* KeychainAccess */; };
+		3B631EA22C1AFBCC00F03A1B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3B631EA12C1AFBCC00F03A1B /* Kingfisher */; };
+		3B631EA52C1AFC0900F03A1B /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 3B631EA42C1AFC0900F03A1B /* PKHUD */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B631EA52C1AFC0900F03A1B /* PKHUD in Frameworks */,
+				3B631EA22C1AFBCC00F03A1B /* Kingfisher in Frameworks */,
+				3B631E9E2C1AFBB600F03A1B /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +149,11 @@
 			dependencies = (
 			);
 			name = reference;
+			packageProductDependencies = (
+				3B631E9D2C1AFBB600F03A1B /* KeychainAccess */,
+				3B631EA12C1AFBCC00F03A1B /* Kingfisher */,
+				3B631EA42C1AFC0900F03A1B /* PKHUD */,
+			);
 			productName = reference;
 			productReference = 3B631E692C1AF96300F03A1B /* reference.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +226,12 @@
 				Base,
 			);
 			mainGroup = 3B631E602C1AF96300F03A1B;
+			packageReferences = (
+				3B631E9C2C1AFBB600F03A1B /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				3B631E9F2C1AFBC000F03A1B /* XCRemoteSwiftPackageReference "Alamofire" */,
+				3B631EA02C1AFBCC00F03A1B /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				3B631EA32C1AFC0900F03A1B /* XCRemoteSwiftPackageReference "PKHUD" */,
+			);
 			productRefGroup = 3B631E6A2C1AF96300F03A1B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -609,6 +626,59 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3B631E9C2C1AFBB600F03A1B /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		3B631E9F2C1AFBC000F03A1B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		3B631EA02C1AFBCC00F03A1B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.12.0;
+			};
+		};
+		3B631EA32C1AFC0900F03A1B /* XCRemoteSwiftPackageReference "PKHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pkluz/PKHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3B631E9D2C1AFBB600F03A1B /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B631E9C2C1AFBB600F03A1B /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+		3B631EA12C1AFBCC00F03A1B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B631EA02C1AFBCC00F03A1B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		3B631EA42C1AFC0900F03A1B /* PKHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B631EA32C1AFC0900F03A1B /* XCRemoteSwiftPackageReference "PKHUD" */;
+			productName = PKHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3B631E612C1AF96300F03A1B /* Project object */;
 }
