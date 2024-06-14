@@ -32,6 +32,9 @@
 		3B631EBD2C1C462400F03A1B /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B631EBC2C1C462400F03A1B /* UITextField+Extension.swift */; };
 		3B631EBF2C1C469400F03A1B /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B631EBE2C1C469400F03A1B /* UIView+Border.swift */; };
 		3B631EC12C1C46F900F03A1B /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B631EC02C1C46F900F03A1B /* UIViewController+Extension.swift */; };
+		3B631EC52C1C47D900F03A1B /* APIRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B631EC42C1C47D900F03A1B /* APIRequestable.swift */; };
+		3B631EC82C1C482800F03A1B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3B631EC72C1C482800F03A1B /* Alamofire */; };
+		3B631ECB2C1C488500F03A1B /* APIConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B631ECA2C1C488500F03A1B /* APIConst.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,8 @@
 		3B631EBC2C1C462400F03A1B /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		3B631EBE2C1C469400F03A1B /* UIView+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Border.swift"; sourceTree = "<group>"; };
 		3B631EC02C1C46F900F03A1B /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		3B631EC42C1C47D900F03A1B /* APIRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestable.swift; sourceTree = "<group>"; };
+		3B631ECA2C1C488500F03A1B /* APIConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConst.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +91,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B631EA52C1AFC0900F03A1B /* PKHUD in Frameworks */,
+				3B631EC82C1C482800F03A1B /* Alamofire in Frameworks */,
 				3B631EA22C1AFBCC00F03A1B /* Kingfisher in Frameworks */,
 				3B631E9E2C1AFBB600F03A1B /* KeychainAccess in Frameworks */,
 			);
@@ -115,6 +121,7 @@
 				3B631E822C1AF96500F03A1B /* referenceTests */,
 				3B631E8C2C1AF96500F03A1B /* referenceUITests */,
 				3B631E6A2C1AF96300F03A1B /* Products */,
+				3B631EC62C1C482800F03A1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +138,8 @@
 		3B631E6B2C1AF96300F03A1B /* reference */ = {
 			isa = PBXGroup;
 			children = (
+				3B631EC92C1C487000F03A1B /* Const */,
+				3B631EC32C1C47B800F03A1B /* API */,
 				3B631EC22C1C475600F03A1B /* Core */,
 				3B631E6C2C1AF96300F03A1B /* AppDelegate.swift */,
 				3B631E6E2C1AF96300F03A1B /* SceneDelegate.swift */,
@@ -196,6 +205,29 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		3B631EC32C1C47B800F03A1B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3B631EC42C1C47D900F03A1B /* APIRequestable.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		3B631EC62C1C482800F03A1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B631EC92C1C487000F03A1B /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				3B631ECA2C1C488500F03A1B /* APIConst.swift */,
+			);
+			path = Const;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -216,6 +248,7 @@
 				3B631E9D2C1AFBB600F03A1B /* KeychainAccess */,
 				3B631EA12C1AFBCC00F03A1B /* Kingfisher */,
 				3B631EA42C1AFC0900F03A1B /* PKHUD */,
+				3B631EC72C1C482800F03A1B /* Alamofire */,
 			);
 			productName = reference;
 			productReference = 3B631E692C1AF96300F03A1B /* reference.app */;
@@ -341,8 +374,10 @@
 				3B631EC12C1C46F900F03A1B /* UIViewController+Extension.swift in Sources */,
 				3B631EB32C1C452C00F03A1B /* UIAlertController+Extension.swift in Sources */,
 				3B631EB12C1C44F600F03A1B /* String+Extension.swift in Sources */,
+				3B631EC52C1C47D900F03A1B /* APIRequestable.swift in Sources */,
 				3B631E712C1AF96300F03A1B /* ViewController.swift in Sources */,
 				3B631EAD2C1AFE1500F03A1B /* UIView+Storyboard.swift in Sources */,
+				3B631ECB2C1C488500F03A1B /* APIConst.swift in Sources */,
 				3B631E6D2C1AF96300F03A1B /* AppDelegate.swift in Sources */,
 				3B631E6F2C1AF96300F03A1B /* SceneDelegate.swift in Sources */,
 				3B631EAF2C1C449C00F03A1B /* Date+Extension.swift in Sources */,
@@ -753,6 +788,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3B631EA32C1AFC0900F03A1B /* XCRemoteSwiftPackageReference "PKHUD" */;
 			productName = PKHUD;
+		};
+		3B631EC72C1C482800F03A1B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B631E9F2C1AFBC000F03A1B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
